@@ -41,7 +41,7 @@ acertou = False
 tentativa = 1
 
 # ================================== LÓGICA ==========================================
-while not acertou
+while not acertou:
 
     print('===================================================================')
     timer(5, ' "A" para CHUTE ALTO \n "B" para CHUTE BAIXO \n "C" para CHUTE CERTO \n \n EM CAPS LOCK!')
