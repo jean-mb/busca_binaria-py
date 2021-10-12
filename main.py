@@ -44,14 +44,14 @@ tentativa = 1
 while not acertou:
 
     print('===================================================================')
-    timer(5, ' "A" para CHUTE ALTO \n "B" para CHUTE BAIXO \n "C" para CHUTE CERTO \n \n EM CAPS LOCK!')
+    timer(2, ' "A" para CHUTE ALTO \n "B" para CHUTE BAIXO \n "C" para CHUTE CERTO \n ')
 
     palpite = round((max + min) / 2)
-    print('\n TENTATIVA {}'.format(tentativa))
-    feedback = input('Seu número é {}? --> '.format(palpite))
+    print(f'\n TENTATIVA {tentativa}')
+    feedback = input(f'Seu número é {palpite}? --> ').upper()
 
     if feedback == correto:
-        print('Eba! Acertei em {} tentativas'.format(tentativa))
+        print(f'Eba! Acertei em {tentativa} tentativas')
         acertou = True
     else:
         if feedback == chute_baixo:
@@ -59,4 +59,4 @@ while not acertou:
         elif feedback == chute_alto:
             max = palpite - 1
 
-        tentativa = tentativa + 1
+        tentativa += 1
