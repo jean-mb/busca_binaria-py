@@ -37,11 +37,10 @@ chute_baixo = 'B'
 correto = 'C'
 
 #-------- CONDIÇÕES --------
-acertou = False
 tentativa = 1
 
 # ================================== LÓGICA ==========================================
-while not acertou:
+while True:
 
     print('===================================================================')
     timer(2, ' "A" para CHUTE ALTO \n "B" para CHUTE BAIXO \n "C" para CHUTE CERTO \n ')
@@ -52,7 +51,7 @@ while not acertou:
 
     if feedback == correto:
         print(f'Eba! Acertei em {tentativa} tentativas')
-        acertou = True
+        break
     else:
         if feedback == chute_baixo:
             min = palpite + 1
